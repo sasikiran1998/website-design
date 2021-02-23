@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: red;
+      font-family: ComicSan;
+      }
+
+body {
+  font-family: Times New Roman;
+  padding: 10px;
+  background-color: lightblue;
+}
+
+
+.header {
+  padding: 30px;
+  text-align: center;
+  background: green ;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: yellow;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: solidred;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: bold;
+}
+
+
+.topnav a:hover {
+  background-color: orange;
+  color: blue;
+}
+
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: red;
+  padding-left: 20px;
+}
+
+
+.fakeimg {
+  background-color: orange;
+  width: 100%;
+  padding: 20px;
+}
+
+
+.card {
+  background-color: yellow;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: grey;
+  margin-top: 20px;
+}
+
+
+ ul{
+background-color:violet;
+padding:25px;
+}
+ul li{
+background-color:red;
+margin:5px;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 50%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+</style>
+</head>
+<style>
+
+.img-hover-zoom {
+  height: 300px; 
+  overflow: hidden; 
+}
+
+
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+.img-hover-zoom {
+  height: 300px; 
+  overflow: hidden; 
+}
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform .5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(2) rotate(25deg);
+}
+.img-hover-zoom--zoom-n-pan-v img {
+  transition: transform .5s ease-in-out;
+  transform: scale(1.4);
+  transform-origin: 0 0;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-pan-v:hover img {
+  transform: scale(1.25) translateY(-30%);
+}
+.img-hover-zoom--zoom-n-pan-h img {
+  transition: transform .5s ease-in-out;
+  transform: scale(1.4);
+  transform-origin: 100% 0;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-pan-h:hover img {
+  transform: scale(1.5) translateX(30%);
+}
+.img-hover-zoom--colorize img {
+  transition: transform .5s, filter 1.5s ease-in-out;
+  filter: grayscale(100%);
+}
+
+/* The Transformation */
+.img-hover-zoom--colorize:hover img {
+  filter: grayscale(0);
+  transform: scale(1.1);
+}
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 50%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+</style>
+<body>
+<marquee>It is my blog and u can explore me...</marquee>
+
+<div class="header">
+  <h1><b><i><strong>I AM JOHNSON</strong></i></b></h1>
+  <h2>And this is where u can catch me up..</h2>
+  <p>Just watch out my blog and find more interesting things about me..</p>
+</div>
+
+<div class="topnav">
+  <a href="#me">About Me</a>
+  <a href="#hobby">MY HOBBIES</a>
+  <a href="#pic">My Pics</a>
+  <a href="#contact" style="float:right">Contact</a>
+</div>
+
+<section id="me">
+
+
+  <div class="section-inner">
+    
+      <h2>All about myself ,know it!!</h2>
+      <h4>Its been a long time since i have got to go out of the country..</h4>
+      <!--<div class="fakeimg" style="height:200px;">-->
+	  
+	  <div class="img-hover-zoom">
+	  <div class="container">
+ 
+  
+
+  <img src="C:\Users\sasi\Desktop\sasi\abc.jpg" width=250 height=250 alt="This zooms-in really well and smooth">
+  
+  <div class="overlay">My Name is John</div>
+</div>
+<!--
+	  <ul>
+                        <li><a href="first.html">BOYS</a></li>
+                        <li><a href="second.html">GIRLS</a></li>
+                        
+                    </ul>
+	  -->
+      </div>
+      
+    </div>
+	</div>
+	</section>
+	<section id="hobby">
+    <div class="section-inner">
+      <h2>My Hobbies are my peace..</h2>
+      <h4>I got to go out and play @childhood...I am a person who is positive about every aspect of life. There are many things I like to do, to see, and to experience. I like to read, I like to write; I like to think, I like to dream; I like to talk, I like to listen</h4>
+    <!-- <div class="fakeimg" style="height:200px;">-->
+	 <div class="img-hover-zoom--zoom-n-pan-h">
+	  <img src="C:\Users\sasi\Desktop\sasi\hob.jpg" width=250 height=250 ></img>
+	   <img src="C:\Users\sasi\Desktop\sasi\hob1.jpg" width=250 height=250 ></img>
+	    <img src="C:\Users\sasi\Desktop\sasi\hob2.jpg" width=250 height=250 ></img>
+		 <img src="C:\Users\sasi\Desktop\sasi\hob3.jpg" width=250 height=250 ></img>
+		 <img src="C:\Users\sasi\Desktop\sasi\hob4.jpg" width=250 height=250 ></img>
+	
+	 <!--<div class="container">
+	 <div class="img-hover-zoom">
+	 <div class="overlay">2019 WINNER</div>
+      <img src="C:\Users\sasi\Desktop\sasi\data.jpeg" width=150 height=150 class="image">
+	 
+	  
+	  </div>
+	  </div>
+	   <div class="img-hover-zoom--zoom-n-pan-h">
+	
+	  <img src="C:\Users\sasi\Desktop\sasi\awards.jpg" width=150 height=150  class="image"></img><!--</div>-->
+	  <!--<div class="img-hover-zoom--zoom-n-pan-v"
+	  <img src="C:\Users\sasi\Desktop\sasi\awar.jpg" width=150 height=150 class="image"></img><!--</div>-->
+	  <!--  <div class="img-hover-zoom--zoom-n-rotate">
+	  <img src="C:\Users\sasi\Desktop\sasi\dat.jpeg" width=150 height=150 class="image"></img><!--</div>-->
+	 
+	  
+	
+	 <!--
+      </div>
+      </div>
+    </div>-->
+	
+  </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section id="pic">
+  <div class="section-inner">
+      <h2>My Fav Pics..</h2>
+      <!--<div class="fakeimg" style="height:100px;">-->
+	  <div class="img">
+	  <img src="C:\Users\sasi\Desktop\sasi\pic1.jpg" width=250 height=250 ></img>
+	  <img src="C:\Users\sasi\Desktop\sasi\pic2.jpg" width=250 height=250 ></img>
+	<img src="C:\Users\sasi\Desktop\sasi\pic3.jpg" width=250 height=250 ></img>
+     <img src="C:\Users\sasi\Desktop\sasi\pic4.jpg" width=250 height=250 ></img>
+	 	  <img src="C:\Users\sasi\Desktop\sasi\pic5.jpg" width=250 height=250 ></img>
+	  </div>
+     <!-- <ul>
+<li>Boys & Girls from level 1-15 fees is Rs1500</li>
+<li>Boys & Girls from level 16-30 fees is Rs2000</li>
+<li>For more levels fees is Rs2500</li>
+</ul>-->
+</div>
+    </div>
+	</section>
+    <div class="card">
+      <h2>Click on the links to view Some more pics of my interest</h2>
+	  <ul>
+                        <li><a href="city.html">CITIES</a></li>
+                        <li><a href="pet.html">PETS</a></li>
+						<li><a href="cars.html">CARS</a></li>
+                        
+                    </ul>
+      
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>If you wanna know more about me!!!.....</p>
+    </div>
+  </div>
+</div>
+<section id="contact">
+                <div class="section-inner">
+                    <h2>Contact me</h2>
+                    <p>You can find me on:</p>
+                    <ul>
+                        <li><a href="https://www.facebook.com">Facebook</a></li>
+                        
+                        <li><a href="https://www.twitter.com">Twitter</a></li>
+                    </ul>
+                    <p>Or, you can <a href="mailto:johnson@codetheweb.blog">send me the mail</a>.</p>
+                COMMANDS<br><textarea name="text" rows="5" cols="25"  >enter comments here...</textarea>
+				</div>
+            </section>
+
+<div class="footer">
+  <h2>@copyrights John </h2>
+</div>
+
+</body>
+</html>

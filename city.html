@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+body
+{
+background-color:red;
+}
+h1
+{
+background-color:green;
+}
+div
+{
+background-color:lightblue;
+}
+
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+.img-hover-zoom {
+  height: 300px; 
+  overflow: hidden; 
+}
+.img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+</style></head>
+<body>
+<h1>My Lovely Cities:</h1>
+
+<div class="img-hover-zoom"><img src="C:\Users\sasi\Desktop\sasi\cit1.jpg" width=350 height=250 ></img></div><p><b><i>This is one of my favourite city where i found my love for the first time..</b></i></p></div>
+    <div class="img-hover-zoom"><img src="C:\Users\sasi\Desktop\sasi\cit2.jpg" width=350 height=255 ></img></div><p><b>The love for this city is from my childhood ..i just wanna once visit this...</b></p></div>
+     <div class="img"><img src="C:\Users\sasi\Desktop\sasi\cit3.png" width=350 height=250 ></img></div><p><b><i><strong>When i see this city i will fall in love with it....</strong></b></p></div>
+	
+	<div class="img-hover-zoom"><img src="C:\Users\sasi\Desktop\sasi\cit4.jpg" width=350 height=250></img></div><p><b><i>This is one of the most coolest and most beautiful city of my interest..</b></i></p></div>
+	
+</body>
+</html>
